@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form class="calculator">
+        <div class="delay">
+                <input class="task" name="task" type="text" placeholder="">
+
+                <input class="answer" name="answer" type="text" placeholder="0" disabled>
+        </div>
+    
+        <div class="buttons">
+                <div class="buttons__wrapper">
+                    <input class="button del" type="button" value="AC" onclick="answer.value = ''" >
+                    <input class="button del" type="button" value="DE" onclick="answer.value = answer.value.slice(0, -1)" >
+                    <input class="button" type="button" value="."  onclick="answer.value += '.'" >
+                    <input class="button sybol" type="button" value="/"  onclick="answer.value += '/'" >
+                </div>
+                <div class="buttons__wrapper">
+                    <input class="button" type="button" value="7" onclick="answer.value += '7'" >
+                    <input class="button" type="button" value="8" onclick="answer.value += '8'" >
+                    <input class="button" type="button" value="9" onclick="answer.value += '9'" >
+                    <input class="button sybol" type="button" value="x" onclick="answer.value += '*'" >
+                </div>
+                <div class="buttons__wrapper">
+                    <input class="button" type="button" value="4" onclick="answer.value += '4'" >
+                    <input class="button" type="button" value="5" onclick="answer.value += '5'" >
+                    <input class="button" type="button" value="6" onclick="answer.value += '6'" >
+                    <input class="button sybol" type="button" value="-" onclick="answer.value += '-'" >
+                </div>
+                <div class="buttons__wrapper">
+                    <input class="button" type="button" value="1" onclick="answer.value += '1'" >
+                    <input class="button" type="button" value="2" onclick="answer.value += '2'" >
+                    <input class="button" type="button" value="3" onclick="answer.value += '3'" >
+                    <input class="button sybol" type="button" value="+" onclick="answer.value += '+'" >
+                </div>
+                <div class="buttons__wrapper">
+                    <input class="button" type="button" value="0" onclick="answer.value += '0'" >
+                    <input class="button eagle" type="button" value="=" onclick="task.value = answer.value + '=' , answer.value = eval(answer.value)" >
+                </div>
+        </div>
+    </form>
+</body>
+</html>
